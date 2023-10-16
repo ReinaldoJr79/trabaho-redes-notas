@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - "5000:5000"
+
+  server-emoji:
+    build:
+      context: ./server-emoji
+    ports:
+      - "5001:5001"
+
+  front:
+    build:
+      context: ./front
+    ports:
+      - "3000:3000"
